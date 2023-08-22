@@ -1,0 +1,247 @@
+:root{
+    --azul__oscuro: #0A3871;
+    --background__color: #F3F5FC;
+    --gris__400: #495057;
+    --gris__500: #343A40;
+    --blanco: #FFFFFF;
+
+    --font: 'Inter', sans-serif;
+
+}
+
+body{
+    background-color: var(--background__color);
+    font-family: var(--font)
+}
+
+/* Header */
+.img__logotipo{
+    margin: 24px 0px 24px 16px;
+    width: 8.5%;
+}
+
+/* Área de texto */
+.container {
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+
+.introducir__texto{
+    color: var(--azul__oscuro);
+    font-family: var(--font);
+    font-size: 2rem;
+    resize: none;
+    border-style: none;
+    background-color: var(--background__color);
+}
+
+/* Área de exclamación */
+.text__exclamacion{
+    color: var(--gris__400);
+    font-size: 0.8rem;
+    padding-left: 5px;
+}
+
+.exclamacion, .text__exclamación{
+    margin-bottom: 1rem;
+}
+
+.niño__lupa{
+    display: none;
+}
+
+.CTA{
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+/* Botones */
+.CTA__button__azul{
+    background-color: var(--azul__oscuro);
+    border-radius: 24px;
+    color: var(--blanco);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 24px;
+    width: 100%;
+    cursor: pointer;    
+}
+
+.CTA__button__blanco{
+    background-color: var(--background__color);
+    border-radius: 24px;
+    border: solid 1px;
+    border-color: var(--azul__oscuro);
+    color: var(--azul__oscuro);
+    font-size: 1rem;
+    text-align: center;
+    padding: 24px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Resultado de la acción */
+.resultado__encriptador{
+    background-color: var(--blanco);
+    border-radius: 24px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 50px auto;
+    text-align: center;
+    width: 90%;
+}
+
+.titulo__inicial{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gris__500);
+    padding: 2rem 2rem 0 2rem;
+}
+
+.texto__resultado {
+    padding: 2rem;
+    line-height: 1.5rem;
+    height: 100%;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+
+.CTA__button__copiar{
+    background-color: var(--blanco);
+    border-radius: 24px;
+    border: solid 1px;
+    border-color: var(--azul__oscuro);
+    color: var(--azul__oscuro);
+    font-size: 1rem;
+    text-align: center;
+    padding: 24px;
+    margin: 2rem;
+    display: none;
+    flex-direction: end;
+    cursor: pointer;
+}
+
+.mensaje-copy{
+    background-color: #0a3871d3;
+    color: var(--blanco);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .6s;
+}
+
+/* Diseño Responsivo Tablet */
+@media screen and (min-width: 768px) {                                                                                                                                                                                      
+    /* Header */
+    .img__logotipo{
+        margin: 72px 0px 24px 40px;
+        width: 8.5%;
+    }
+
+    /* Área de texto */
+    .text__area{
+        margin-top: 5rem;
+    }
+    
+    .introducir__texto{
+        width: 100%;
+    }
+
+    .text__exclamacion{
+        flex-basis: 90%;
+    }
+
+    /* Botones */
+    .CTA__button__azul{
+        flex-basis: 45%;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .CTA__button__blanco{
+        flex-basis: 45%;
+        margin-bottom: 0;
+    }
+
+    /* Button copiado */
+    .mensaje-copy{
+        height: 110%;
+    }
+}
+
+/* Diseño Responsivo Desktop */
+@media screen and (min-width: 1024px){
+    /* Contenedores principales */
+    .container__principal{
+        display: flex;
+    }
+    
+    .container__1{
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resultado__encriptador{
+        width: 25%;
+        margin: 40px 2rem 80px 2rem;
+    }
+
+    /* Logotipo */
+    .img__logotipo{
+        margin: 40px 0px 24px 40px;
+        width: 4%;
+    }
+
+    /* Área del texto */
+    .text__area, .CTA{
+        margin: 20px 20px 80px 100px;
+        width: 85%;
+    }
+
+     /* Botones */
+     .CTA__button__azul{
+        flex-basis: 47%;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .CTA__button__blanco{
+        flex-basis: 47%;
+        margin-bottom: 0;
+    }
+
+    /* Resultados */
+    .niño__lupa{
+        margin: 8rem auto 0;
+        width: 70%;
+        text-align: center;
+        align-self: auto;
+        display: block;
+    }
+
+    /* Button copiado */
+    .mensaje-copy{
+        height: 110%;
+    }
+}
